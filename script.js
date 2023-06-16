@@ -50,20 +50,27 @@
 // Comprando muebles
 
 var botonComprar = document.getElementById("comprar");
-var botonSacarProducto = document.getElementById("sacarItem")
+var botonSacarProducto = document.getElementById("sacarItem");
 var circulo = document.getElementById("circulo");
+var silla = document.getElementById("valorSilla");
+var valorSilla = 2500;
+silla.innerHTML = valorSilla;
+var total = document.getElementById("total");
 var valorCirculo = 0;
-circulo.innerHTML = valorCirculo
+circulo.innerHTML = valorCirculo;
 
 botonComprar.addEventListener("click", () => {
   valorCirculo++;
-
   circulo.innerHTML = valorCirculo;
+
+  total.innerHTML = valorSilla * valorCirculo;
 });
 
 botonSacarProducto.addEventListener("click", () => {
-    if(valorCirculo > 0) { // con este if evito que se me generen numeros negativos en la cantidad
-        valorCirculo--;
-        circulo.innerHTML = valorCirculo
-    }
-})
+  if (valorCirculo > 0) {
+    // con este if evito que se me generen numeros negativos en la cantidad
+    valorCirculo--;
+    circulo.innerHTML = valorCirculo;
+    total.innerHTML = valorSilla * valorCirculo;
+  }
+});
