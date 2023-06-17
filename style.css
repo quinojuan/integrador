@@ -94,3 +94,13 @@ img{
     display: flex;
     gap: 40px;
 }
+/*********agregado**********/
+
+#tema2 {
+    display: flex;
+}
+
+/*********agregado**********/
+#murci {
+    width: 650px;
+}
